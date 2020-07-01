@@ -15,7 +15,9 @@ app.set("json spaces", 2);
 
 app.use(db);
 app.use("/api/*", zencode);
-app.use("/docs", ui);
+app.use("/docs", ui({path: "./zencode"}));
+app.use("/one", ui({path: "./zencode/one"}));
+app.use("/two", ui({path: "./zencode/two"}));
 
 app.listen(PORT, HOST, () => {
   console.log(
