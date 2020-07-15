@@ -1,10 +1,17 @@
 import express from "express";
 import chalk from "chalk";
 import bodyParser from "body-parser";
-import { ZENCODE_DIR, PORT, HOST } from "./config";
+import { ZENCODE_DIR, HTTP_PORT, HTTPS_PORT, HOST } from "./config";
 import zencode from "@restroom-mw/core";
 import ui from "@restroom-mw/ui";
 import db from "@restroom-mw/db";
+import http from "http";
+import https from "https";
+import fs from "fs";
+
+var privateKey = fs.readFileSync("ssl/selfsigned.key", "utf8");
+var certificate = fs.readFileSync("ssl/selfsigned.crt", "utf8");
+var credentials = { key: privateKey, cert: certificate };
 
 const app = express();
 
@@ -15,14 +22,21 @@ app.set("json spaces", 2);
 
 app.use(db);
 app.use("/api/*", zencode);
-app.use("/docs", ui({path: "./zencode"}));
-app.use("/one", ui({path: "./zencode/one"}));
-app.use("/two", ui({path: "./zencode/two"}));
+app.use("/docs", ui({ path: "./zencode" }));
+app.use("/one", ui({ path: "./zencode/one" }));
+app.use("/two", ui({ path: "./zencode/two" }));
 
-app.listen(PORT, HOST, () => {
+const httpServer = http.createServer(app);
+httpServer.listen(HTTP_PORT, HOST, () => {
   console.log(
-    "Restroom started on " + chalk`{bold.blue http://0.0.0.0:${PORT}\n}`
+    "Restroom started on " + chalk`{bold.blue http://0.0.0.0:${HTTP_PORT}}`
   );
-  console.log(`ZENCODE DIR: ${chalk.magenta.underline(ZENCODE_DIR)}\n`);
-  console.log("Serving:\n");
+});
+
+const httpsServer = https.createServer(credentials, app);
+httpsServer.listen(HTTPS_PORT, HOST, () => {
+  console.log(
+    "Restroom started on " + chalk`{bold.blue http://0.0.0.0:${HTTPS_PORT}}`
+  );
+  console.log(`ZENCODE DIR: ${chalk.magenta.underline(ZENCODE_DIR)}`);
 });
