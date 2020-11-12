@@ -5,6 +5,7 @@ import { ZENCODE_DIR, HTTP_PORT, HTTPS_PORT, HOST } from "./config";
 import zencode from "@restroom-mw/core";
 import ui from "@restroom-mw/ui";
 import db from "@restroom-mw/db";
+import httpmw from "@restroom-mw/http";
 import http from "http";
 import https from "https";
 import fs from "fs";
@@ -21,6 +22,7 @@ app.use(require("morgan")("dev"));
 app.set("json spaces", 2);
 
 app.use(db);
+app.use(httpmw);
 app.use("/api/*", zencode);
 app.use("/docs", ui({ path: "./zencode" }));
 app.use("/one", ui({ path: "./zencode/one" }));
