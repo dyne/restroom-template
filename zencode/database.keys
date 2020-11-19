@@ -1,4 +1,4 @@
 {
-"myUri": "sqlite:///home/apiroom/public_html/sqliteApiroom1.db",
+"myUri": "sqlite:///home/user/sqlite.db",
 "myTable": "InfoTable1" 
 }
