@@ -1,0 +1,4 @@
+{
+"myUri": "sqlite:///./database.db",
+"myTable": "InfoTable1" 
+}
