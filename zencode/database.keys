@@ -1,4 +1,4 @@
 {
-"myUri": "sqlite:///home/user/sqlite.db",
+"myUri": "sqlite:///./database.db",
 "myTable": "InfoTable1" 
 }
