@@ -1,0 +1,9 @@
+version: "3"
+services:
+  app:
+    build: .
+    environment:
+        HTTP_PORT: 3000
+        ZENCODE_DIR: /app/zencode
+    ports:
+        - "3000:3000"
