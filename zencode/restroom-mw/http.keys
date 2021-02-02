@@ -1,0 +1,4 @@
+{
+	"endpoint": "https://apiroom.net/api/dyneorg/512-bits-random-generator",
+	"timeServer": "http://showcase.api.linx.twenty57.net/UnixTime/tounix?date=now"
+}

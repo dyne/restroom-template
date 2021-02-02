@@ -1,5 +1,5 @@
 Rule unknown ignore
-Scenario sawroom: Read from endpoint
+Scenario 'Restroom-mw': Read from a Sawroom blockchain node
 Given I have a 'string' named 'endpoint'
 And I have a 'string' named 'batchId'
 And I have a 'string dictionary' named 'sawroom'

@@ -40,7 +40,8 @@ httpServer.listen(HTTP_PORT, HOST, () => {
 const httpsServer = https.createServer(credentials, app);
 httpsServer.listen(HTTPS_PORT, HOST, () => {
   console.log(
-    "Restroom started on " + chalk`{bold.blue https://0.0.0.0:${HTTPS_PORT}}`
+    "Restroom started on " + chalk`{bold.blue https://0.0.0.0:${HTTPS_PORT}} \n`
   );
-  console.log(`ZENCODE DIR: ${chalk.magenta.underline(ZENCODE_DIR)}`);
+  console.log(`the ZENCODE directory is: ${chalk.magenta.underline(ZENCODE_DIR)} \n`);
+  console.log( "To open Swagger go to: " + chalk`{bold.blue http://0.0.0.0:${HTTP_PORT}/docs}`);
 });

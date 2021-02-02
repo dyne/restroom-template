@@ -1,0 +1,12 @@
+# Create a keypair with a username passed as a parameter
+# The username can be passed both as "keys" or "data" 
+# (note that  restroom-mw will only read files .zen and .keys)
+
+Scenario 'ecdh': Create the keypair from a name passed from data/keys
+
+# Here we load the identity of the executor
+Given my name is in a 'string' named 'myName'
+
+# Here we generate and print the keypair
+When I create the keypair
+Then print my data

@@ -1,6 +1,6 @@
-rule check version 1.0.0
+# Create a random array
 
-Scenario 'ecdh' : Generate a random password
+rule check version 1.0.0
 
 Given nothing
 
