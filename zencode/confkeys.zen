@@ -1,2 +1,4 @@
+# This script simply gets Zenroom to print a variable read from a file
+
 Given I have a 'string' named 'variable'
 Then print the 'variable'

@@ -1,6 +1,6 @@
 Rule unknown ignore
 rule check version 1.0.0
-Scenario sawroom: Save data into the blockchain
+Scenario 'Restroom-mw': Write data to aa Sawroom blockchain node
 Given that I have a sawroom endpoint named 'sawroomEndpoint'
 Given that I have an id for a sawroom context named 'myTransactionId1'
 Given that I have an id for a sawroom context named 'myTransactionId2'
