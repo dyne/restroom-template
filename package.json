@@ -8,11 +8,11 @@
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
     "@dyne/sawroom-client": "^1.6.2",
-    "@restroom-mw/core": "^0.9.3-dccef52.7",
-    "@restroom-mw/db": "^0.9.3-dccef52.7",
-    "@restroom-mw/http": "^0.9.3-dccef52.7",
-    "@restroom-mw/sawroom": "^0.9.3-dccef52.7",
-    "@restroom-mw/ui": "^0.9.3-dccef52.7",
+    "@restroom-mw/core": "next",
+    "@restroom-mw/db": "next",
+    "@restroom-mw/http": "next",
+    "@restroom-mw/sawroom": "next",
+    "@restroom-mw/ui": "next",
     "axios": "^0.21.1",
     "chalk": "^4.0.0",
     "core-js": "^3.9.1",
@@ -25,7 +25,7 @@
     "rimraf": "^3.0.2",
     "sqlite3": "^5.0.2",
     "swagger-ui-express": "^4.1.6",
-    "zenroom": "^2.2.0"
+    "zenroom": "next"
   },
   "scripts": {
     "prebuild": "rimraf dist",
