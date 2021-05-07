@@ -1,7 +1,7 @@
 import express from "express";
 import chalk from "chalk";
 import bodyParser from "body-parser";
-import { ZENCODE_DIR, HTTP_PORT, HTTPS_PORT, HOST } from "./config";
+import { ZENCODE_DIR, HTTP_PORT, HTTPS_PORT, HOST, OPENAPI } from "./config";
 import zencode from "@restroom-mw/core";
 import ui from "@restroom-mw/ui";
 import db from "@restroom-mw/db";
@@ -26,7 +26,7 @@ app.use(db);
 app.use(sawroom);
 app.use(httpmw);
 app.use("/api/*", zencode);
-app.use("/docs", ui({ path: "./zencode" }));
+if (OPENAPI) {app.use("/docs", ui({ path: "./zencode" }));}
 app.use("/one", ui({ path: "./zencode/one" }));
 app.use("/two", ui({ path: "./zencode/two" }));
 
@@ -43,5 +43,6 @@ httpsServer.listen(HTTPS_PORT, HOST, () => {
     "Restroom started on " + chalk`{bold.blue https://0.0.0.0:${HTTPS_PORT}} \n`
   );
   console.log(`the ZENCODE directory is: ${chalk.magenta.underline(ZENCODE_DIR)} \n`);
-  console.log( "To open Swagger go to: " + chalk`{bold.blue http://0.0.0.0:${HTTP_PORT}/docs}`);
+  console.log( "To open OpenApi go to: " + chalk`{bold.blue http://0.0.0.0:${HTTP_PORT}/docs}`);
+  console.log( "To disable OpenApi, set OPENAPI .env variable as false.");
 });
