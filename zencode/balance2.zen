@@ -1,0 +1,11 @@
+# Always use "Rule unknown ignore" when using Restroom
+
+Rule unknown ignore
+
+Given that I have a sawroom endpoint named 'myEndpoint'
+
+Given I have a 'number' named 'insideMyBalance'
+
+Given balance of 'mytag' in 'insideMyBalance'
+
+Then print all data
