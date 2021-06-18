@@ -6,6 +6,6 @@ Given that I have a sawroom endpoint named 'myEndpoint'
 
 Given I have a 'number' named 'insideMyBalance'
 
-Given balance of 'mytag' in 'insideMyBalance'
+Given I ask Sawroom the balance of 'mytag' in 'insideMyBalance'
 
 Then print all data

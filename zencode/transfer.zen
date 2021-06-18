@@ -6,5 +6,5 @@ Given that I have a sawroom endpoint named 'myEndpoint'
 
 When I create the random object of '128' bits
 
-Then transfer '1' from 'mytag' to 'mytag2' and store the result in 'myOutput'
+Then I ask Sawroom to transfer '1' from 'mytag' to 'mytag2' and store the result in 'myOutput'
 Then print all data
