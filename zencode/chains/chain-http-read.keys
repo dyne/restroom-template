@@ -1,0 +1,10 @@
+{
+	"endpoint": "https://apiroom.net/api/dyneorg/512-bits-random-generator",
+	"timeServer": "http://apiroom.net:3312/",
+	"Alice": {
+		"keypair": {
+			"private_key": "rodjwxs8fn53WP0yyaIllFhuhwOhqJazxjo5S4uRamQ=",
+			"public_key": "BMlEm0RkLQwPOLihI9AvuhqeID48cpavUHbVbD+dg5wM1jKROR+t2XFN9xXipIKpssEsDcQiJ8uv0Z+2e5YdkdA="
+		}
+	}
+}

@@ -1,0 +1,4 @@
+{
+	"httpInput": "https://apiroom.net/api/dyneorg/chain1-http-read",
+	"outputEndpoint": "https://dyneorg.free.beeceptor.com"
+}

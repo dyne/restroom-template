@@ -1,0 +1,9 @@
+zenchains: 1.0
+name: ./chains/chain-http-read-post
+start: ./chains/chain-http-read.zen
+blocks:
+  ./chains/chain-http-read.zen:
+    next: ./chains/chain-http-post.zen
+    keysFile: ./chains/chain-http-read.keys
+  ./chains/chain-http-post.zen:
+    keysFile: ./chains/chain-http-post.keys

@@ -1,0 +1,37 @@
+
+# Always use 'Rule caller restroom-mw' when using Restroom
+Rule caller restroom-mw
+
+
+# we'll need to create a keypair to produce an ECDSA signature later
+Scenario 'ecdh': Create the keypair
+Given that I am known as 'Alice'
+Given that I have my 'keypair'
+# Those are restroom-mw statements: define the endpoints
+Given that I have an endpoint named 'endpoint' 
+Given that I have an endpoint named 'timeServer' 
+
+# We need those object to store the output of the endpoints
+Given I have a 'string dictionary' named 'dataFromEndpoint'
+Given I have a 'number' named 'timestamp'
+
+# Those are restroom-mw statements: connect to endpoints and store their output into Zenroom's objects
+Given I connect to 'endpoint' and save the output into 'dataFromEndpoint'
+Given I connect to 'timeServer' and save the output into 'timestamp'
+
+# Create a string dictionary to format the output 
+When I create the 'string dictionary'
+and I rename the 'string dictionary' to 'outputData'
+
+# Organize the output of the endpoints in the string dictionary
+When I insert 'dataFromEndpoint' in 'outputData'
+When I insert 'timestamp' in 'outputData'
+
+# ECDSA signature
+# When I create the keypair
+When I create the signature of 'outputData'
+When I rename the 'signature' to 'outputData.signature'
+
+# Printing the output
+Then print the 'outputData'
+Then print the 'outputData.signature'
