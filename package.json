@@ -25,7 +25,7 @@
     "rimraf": "^3.0.2",
     "sqlite3": "^5.0.2",
     "swagger-ui-express": "^4.1.6",
-    "zenroom": "next"
+    "zenroom": "2.2.2-5641c9dd"
   },
   "scripts": {
     "prebuild": "rimraf dist",
