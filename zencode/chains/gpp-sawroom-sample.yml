@@ -1,11 +1,11 @@
 zenchain: 1.0
-name: sawroom-blockchain
-start: single-random.zen
+name: ./chains/sawroom-blockchain
+start: ./chains/single-random.zen
 blocks:
-  single-random.zen:
-    next: sawroom-store-secret-message.zen
-  sawroom-store-secret-message.zen:
-    keysFile: sawroom-store-secret-message-input.keys
-    next: sawroom-read-secret-message.zen
-  sawroom-read-secret-message.zen:
-    keysFile: sawroom-read-secret-message-input.keys
+  ./chains/single-random.zen:
+    next: ./chains/sawroom-store-secret-message.zen
+  ./chains/sawroom-store-secret-message.zen:
+    keysFile: ./chains/sawroom-store-secret-message-input.keys
+    next: ./chains/sawroom-read-secret-message.zen
+  ./chains/sawroom-read-secret-message.zen:
+    keysFile: ./chains/sawroom-read-secret-message-input.keys
