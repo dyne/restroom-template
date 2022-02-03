@@ -6,6 +6,7 @@ import zencode from "@restroom-mw/core";
 import ui from "@restroom-mw/ui";
 import db from "@restroom-mw/db";
 import httpmw from "@restroom-mw/http";
+import redis from "@restroom-mw/redis";
 import sawroom from "@restroom-mw/sawroom";
 import http from "http";
 import https from "https";
@@ -25,6 +26,7 @@ app.set("json spaces", 2);
 app.use(db);
 app.use(sawroom);
 app.use(httpmw);
+app.use(redis);
 app.use("/api/*", zencode);
 if (OPENAPI) {
   app.use("/docs", ui({ path: "./zencode" }));
