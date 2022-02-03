@@ -11,6 +11,7 @@
     "@restroom-mw/core": "next",
     "@restroom-mw/db": "next",
     "@restroom-mw/http": "next",
+    "@restroom-mw/redis": "next",
     "@restroom-mw/sawroom": "next",
     "@restroom-mw/ui": "next",
     "axios": "^0.21.1",
