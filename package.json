@@ -14,6 +14,7 @@
     "@restroom-mw/redis": "next",
     "@restroom-mw/sawroom": "next",
     "@restroom-mw/ui": "next",
+	"@restroom-mw/timestamp": "next",
     "axios": "^0.21.1",
     "chalk": "^4.0.0",
     "core-js": "^3.9.1",

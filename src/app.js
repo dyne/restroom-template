@@ -8,6 +8,7 @@ import db from "@restroom-mw/db";
 import httpmw from "@restroom-mw/http";
 import redis from "@restroom-mw/redis";
 import sawroom from "@restroom-mw/sawroom";
+import timestamp from "@restroom-mw/timestamp";
 import http from "http";
 import https from "https";
 import fs from "fs";
@@ -27,6 +28,7 @@ app.use(db);
 app.use(sawroom);
 app.use(httpmw);
 app.use(redis);
+app.use(timestamp);
 app.use("/api/*", zencode);
 if (OPENAPI) {
   app.use("/docs", ui({ path: "./zencode" }));
